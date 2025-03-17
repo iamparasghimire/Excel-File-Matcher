@@ -20,6 +20,7 @@ Bootstrap (For Styling, Optional)
 1️⃣ Clone the Repository
 
 git clone git@github.com:iamparasghimire/Excel-File-Matcher.git
+
 cd django-excel-matcher
 
 2️⃣ Create a Virtual Environment
