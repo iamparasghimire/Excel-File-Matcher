@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel File Matcher</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload Two Excel Files to Match</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Check Matching Rows</button>
+    </form>
+
+    {% if result is not None %}
+        <h3>Matching Rows Count: {{ result }}</h3>
+        {% if matching_rows %}
+            <h3>Matching Rows:</h3>
+            {{ matching_rows | safe }}  <!-- Display HTML table -->
+        {% endif %}
+    {% endif %}
+</body>
+</html>

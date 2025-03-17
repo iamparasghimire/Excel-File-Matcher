@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel File Matcher</title>
+</head>
+<body>
+    <h2>Upload Two Excel Files to Match</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Check Matching Rows</button>
+    </form>
+
+    {% if result is not None %}
+        <h3>Matching Rows: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
