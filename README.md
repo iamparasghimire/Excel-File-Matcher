@@ -14,20 +14,6 @@ OpenPyXL (Excel File Handling)
 
 Bootstrap (For Styling, Optional)
 
-📂 Project Structure
-
-myproject/
-│── myapp/
-│   ├── views.py
-│   ├── urls.py
-│   ├── forms.py
-│   ├── logic.py  # Python logic for Excel comparison
-│   ├── templates/
-│   │   ├── myapp/
-│   │   │   ├── match_excel.html  # HTML Template for upload & output
-│   ├── __init__.py
-│── manage.py
-│── README.md
 
 🚀 Installation & Setup
 
